@@ -1,0 +1,41 @@
+<script setup>
+import { reactive, onMounted } from "vue"
+import * as echarts from 'echarts/core';
+import { GridComponent } from 'echarts/components';
+import { LineChart } from 'echarts/charts';
+import { UniversalTransition } from 'echarts/features';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([GridComponent, LineChart, CanvasRenderer, UniversalTransition]);
+
+const option = reactive({
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            data: [150, 230, 224, 218, 135, 147, 260],
+            type: 'line'
+        }
+    ]
+})
+const initeCharts = () => {
+    let myChart = echarts.init(document.getElementById('main'))
+    myChart.setOption(option)
+}
+// 绘制图表
+onMounted(() => {
+    initeCharts()
+})
+
+</script>
+
+<template>
+    <el-row justify="center" style="margin: 40px;">
+        <div id="main" style="width: 600px;height:400px;"></div>
+    </el-row>
+</template>
