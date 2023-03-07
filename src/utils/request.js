@@ -1,4 +1,7 @@
 import axios from "axios"
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const errorHaddle = (status, info) => {
     switch (status) {
@@ -7,6 +10,7 @@ const errorHaddle = (status, info) => {
             break;
         case 401:
             console.log("服务器认证失败");
+            window.location.replace("/login/")
             break;
         case 403:
             console.log("服务器拒绝访问");
@@ -34,6 +38,10 @@ const instance = axios.create({
 //发送数据之前拦截器
 instance.interceptors.request.use(
     config => {
+        if (window.localStorage.token) {
+            config.headers['Authorization'] = "token " + window.localStorage.token
+          }
+
         return config;
     },
     error => {

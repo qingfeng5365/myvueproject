@@ -1,8 +1,10 @@
 <script setup>
 import { reactive } from "vue"
 import { useRoute, useRouter } from 'vue-router'
+import { useAdminStore } from '../stores/admin'
 import api from '../api/index'
 
+const admin = useAdminStore()
 const route = useRoute()
 const router = useRouter()
 const form = reactive({
@@ -19,7 +21,11 @@ function onlogin() {
         //获取路径上的参数（id）
         // console.log(route.query)
         // router.push('/manage/admin')
+        //window.location.replace("/")
+        //admin.token = res.data.token
+        localStorage.setItem('token', res.data.token)
         window.location.replace("/")
+        
     }).catch(err => {
 
     })

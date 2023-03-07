@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive } from "vue"
-import { useAdminStore } from '../stores/admin'
+import { useAdminStore } from '../stores/admin.js'
 import api from '../api/index'
 import { Plus } from '@element-plus/icons-vue'
 

@@ -7,6 +7,7 @@ export const useAdminStore = defineStore('admin', () => {
   const currentRow = ref()
   const currentPage = ref(1)
   const count = ref(1000)
+  const token = ref()
 
   function getTableData(page) {
     api.getAdmin(page)
@@ -19,5 +20,7 @@ export const useAdminStore = defineStore('admin', () => {
       })
   }
 
-  return { tableData, currentRow, count, currentPage, getTableData, }
+
+
+  return { tableData, currentRow, count, currentPage, getTableData, token}
 })
