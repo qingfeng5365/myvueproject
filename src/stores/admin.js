@@ -6,7 +6,7 @@ export const useAdminStore = defineStore('admin', () => {
   const tableData = ref([])
   const currentRow = ref()
   const currentPage = ref(1)
-  const count = ref(1000)
+  const count = ref(50)
   const token = ref()
 
   function getTableData(page) {
