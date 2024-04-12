@@ -18,7 +18,7 @@ const handleSelect = (key, keyPath) => {
 <template>
   <el-menu :default-active="activeIndex" :router=true class="el-menu-demo" mode="horizontal" background-color="#ffffff"
     text-color="#222226" active-text-color="#fc5531" :ellipsis="false" style="height: 45px;" @select="handleSelect">
-    <el-menu-item index="#"><el-icon>
+    <el-menu-item index="/"><el-icon>
         <HomeFilled />
       </el-icon></el-menu-item>
     <el-sub-menu index="2">
