@@ -29,8 +29,8 @@ const option = reactive({
         trigger: 'item'
     },
     legend: {
-        orient: 'vertical',
-        left: 'left'
+        orient: 'horizontal',
+        left: 'top'
     },
     series: [
         {
