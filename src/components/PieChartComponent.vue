@@ -30,7 +30,7 @@ const option = reactive({
     },
     legend: {
         orient: 'horizontal',
-        left: 'top'
+        left: 'bottom'
     },
     series: [
         {
