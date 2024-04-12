@@ -34,8 +34,10 @@ const handleSelect = (key, keyPath) => {
       <el-menu-item index="/echarts/pie">Pie</el-menu-item>
     </el-sub-menu>
     <div class="flex-grow" />
-    <el-menu-item index="/login">Signin</el-menu-item>
-    <el-menu-item index="/logout">Logout</el-menu-item>
+    <el-sub-menu index="4">
+      <el-menu-item index="/login">Login</el-menu-item>
+      <el-menu-item index="/logout">Logout</el-menu-item>
+    </el-sub-menu>
   </el-menu>
   <RouterView />
 </template>
