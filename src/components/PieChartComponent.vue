@@ -30,7 +30,10 @@ const option = reactive({
     },
     legend: {
         orient: 'horizontal',
-        bottom: 'bottom'
+        bottom: 'bottom',
+        textStyle: {
+            color: 'white' // 设置图例文字颜色为红色
+        }
     },
     series: [
         {
