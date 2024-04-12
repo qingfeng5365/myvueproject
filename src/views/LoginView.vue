@@ -61,7 +61,7 @@ function onlogin() {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 350px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, .5);
